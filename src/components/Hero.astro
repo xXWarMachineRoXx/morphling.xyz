@@ -1,7 +1,7 @@
 ---
 import { Icon } from 'astro-icon'
-
 const { src = '/hero_liquid.gif' } = Astro.props
+
 ---
 
 <section class="hero my-24">
@@ -12,23 +12,26 @@ const { src = '/hero_liquid.gif' } = Astro.props
           <slot>Best Liquid blog for <span class="text-gradient">Devs</span></slot>
         </h1>
         <div class="flex flex-col gap-3 min-[500px]:flex-row">
-          <a class="button has-icon" href="https://github.com/markteekman/accessible-astro-starter">
+          <a
+            style="text-decoration: none !important; "
+            class="button has-icon type-secondary "
+            href="https://github.com/xxxwarmachineroxxx/morphling.xyz/#readme"
+          >
+            <Icon pack="mdi" name="ocean" />
+            Dive in! &nbsp; &nbsp;
+          </a>
+          
+          <a
+            style="width:200px; text-decoration: none !important; "
+            class="button has-icon color-primary-900"
+            href="https://github.com/xxXWarMachineRoXxx/morphling.xyz/"
+          >
             <Icon pack="ion" name="star-outline" />
             Star on GitHub
           </a>
-          <!-- <a
-            class="button has-icon color-secondary"
-            href="https://github.com/markteekman/accessible-astro-starter/blob/main/README.md"
-          >
-            <Icon pack="ion" name="bookmark-outline" />
-            Read the Docs
-          </a>   -->
-          <!-- <a href="https://www.buymeacoffee.com/xxxwarmachineroxxx"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a cold coffee&emoji=☕&slug=xxxwarmachineroxxx&button_colour=5F7FFF&font_colour=ffffff&font_family=Poppins&outline_colour=000000&coffee_colour=FFDD00" /></a> -->
-
-          <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="xxxwarmachineroxxx" data-color="#5F7FFF" data-emoji="☕"  data-font="Poppins" data-text="Buy me a cold coffee" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script>
         </div>
       </div>
-      <img class="hidden lg:block" src={src} alt="" decoding="async" />
+      <img class="hero-hue-change hidden lg:block" src={src} alt="" decoding="async" />
     </div>
   </div>
 </section>
@@ -40,11 +43,17 @@ const { src = '/hero_liquid.gif' } = Astro.props
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+  .hero-hue-change {
+    filter: invert(1) hue-rotate(142deg) brightness(1.5);
+  }
 
   :global(.darkmode .text-gradient) {
     background: linear-gradient(315deg, var(--primary-200) 25%, var(--secondary-400));
     background-clip: border-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+  :global(.darkmode .hero-hue-change) {
+    filter: invert(0) hue-rotate(290deg);
   }
 </style>
