@@ -1,7 +1,7 @@
 ---
 import { Icon } from 'astro-icon'
 
-const { src = '/astronaut-hero-img.webp' } = Astro.props
+const { src = '/hero_liquid.gif' } = Astro.props
 ---
 
 <section class="hero my-24">
@@ -9,20 +9,23 @@ const { src = '/astronaut-hero-img.webp' } = Astro.props
     <div class="grid grid-cols-1 items-center gap-24 lg:grid-cols-2">
       <div class="flex flex-col items-center gap-8 md:items-start">
         <h1 class="text-center text-6xl md:text-left lg:text-8xl">
-          <slot><span class="text-gradient">Accessible</span> Starter for Astro</slot>
+          <slot>Best Liquid blog for <span class="text-gradient">Devs</span></slot>
         </h1>
         <div class="flex flex-col gap-3 min-[500px]:flex-row">
           <a class="button has-icon" href="https://github.com/markteekman/accessible-astro-starter">
             <Icon pack="ion" name="star-outline" />
             Star on GitHub
           </a>
-          <a
+          <!-- <a
             class="button has-icon color-secondary"
             href="https://github.com/markteekman/accessible-astro-starter/blob/main/README.md"
           >
             <Icon pack="ion" name="bookmark-outline" />
             Read the Docs
-          </a>
+          </a>   -->
+          <!-- <a href="https://www.buymeacoffee.com/xxxwarmachineroxxx"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a cold coffee&emoji=☕&slug=xxxwarmachineroxxx&button_colour=5F7FFF&font_colour=ffffff&font_family=Poppins&outline_colour=000000&coffee_colour=FFDD00" /></a> -->
+
+          <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="xxxwarmachineroxxx" data-color="#5F7FFF" data-emoji="☕"  data-font="Poppins" data-text="Buy me a cold coffee" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script>
         </div>
       </div>
       <img class="hidden lg:block" src={src} alt="" decoding="async" />
