@@ -3,7 +3,7 @@
 ![logo-image](https://github.com/xxXWarMachineRoXxx/morphling.xyz/blob/b943b1e9132ebb2ab3c0fdb49327064697c26e89/src/assets/img/logo.svg)
 
 
-morphling.xyz is the best liquid tech blog for exciting new news about ai,llms,agi.
+[morphling.xyz](https://morphling.xyz/) is the best liquid tech blog for exciting new news about AI ,LLMs,AGI.
 
 🚀 [Check it out now! ](https://morphling.xyz/)
 
