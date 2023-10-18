@@ -1,7 +1,9 @@
 <div class="container">
-  <div class="call-to-action mt-24 mb-32 flex flex-col items-center gap-12 rounded-xl p-12 md:p-24">
+  <div class="call-to-action water-animation water mb-32 mt-24 flex flex-col items-center gap-12 rounded-xl p-12 md:p-24">
     <h2 class="text-center text-3xl md:text-5xl">Dive Deeper.</h2>
-    <a href="https://github.com/markteekman/accessible-astro-starter" class="text-center text-lg"> Newsletter coming soon.</a>
+    <a href="https://github.com/markteekman/accessible-astro-starter" class="text-center text-lg">
+      Newsletter coming soon.</a
+    >
   </div>
 </div>
 
@@ -25,6 +27,48 @@
       color: var(--neutral-100);
       background-color: var(--neutral-900);
       text-decoration: underline;
+    }
+  }
+  .water-animation {
+    background: radial-gradient( #fdfdfd,#bce5f7,  #0b94fd , #1b0469,);
+    background-size: 600% 600%;
+
+    -webkit-animation: water 12s ease infinite;
+    -moz-animation: water 12s ease infinite;
+    animation: water 12s ease infinite;
+  }
+
+  @-webkit-keyframes water :hover {
+    0% {
+      background-position: 60% 0%;
+    }
+    50% {
+      background-position: 41% 100%;
+    }
+    100% {
+      background-position: 60% 0%;
+    }
+  }
+  @-moz-keyframes water {
+    0% {
+      background-position: 60% 0%;
+    }
+    50% {
+      background-position: 41% 100%;
+    }
+    100% {
+      background-position: 60% 0%;
+    }
+  }
+  @keyframes water {
+    0% {
+      background-position: 60% 0%;
+    }
+    50% {
+      background-position: 41% 100%;
+    }
+    100% {
+      background-position: 60% 0%;
     }
   }
 </style>
