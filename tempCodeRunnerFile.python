@@ -1,0 +1,30 @@
+class Solution:
+    def count(self, n:int ) -> dict[int,int]:
+        # count occurences/frequency of n using hashing
+        # return the count
+        a=dict()
+        n=str(n)
+        for i in n:
+            if i in a:
+                a[i]+=1
+            else:
+                a[i]=1
+        return a
+    def countAndSay(self, n: int) -> str:
+        # concatenate the count and the number
+        # return the concatenated string
+        
+        a=self.count(n)
+        s=""
+        for i in a:
+            s+=str(a[i])+str(i)
+        return s
+    
+if __name__ == '__main__':
+    countnsay = Solution()
+    n = 1
+    print(countnsay.countAndSay(n))
+    n = 2
+    print(countnsay.countAndSay(n))
+    n = 1211
+    print(countnsay.countAndSay(n))
